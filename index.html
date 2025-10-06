@@ -1,0 +1,917 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sharks from Space | NASA Challenge</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/animated-headline.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    
+    <style>
+
+        .map-btn {
+  display: inline-block;
+}
+
+.text-end {
+  text-align: right;
+  margin-right: 80px;
+}
+
+@media (max-width: 768px) {
+  .text-end {
+    text-align: center;
+  }
+}
+
+.model-wrap {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+  background: #2D0A31;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 5px white;
+  border-radius: 10px;
+}
+
+#prediction-result{
+color: #7a8290;
+font-size: 24px;
+}
+
+
+model-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  --poster-color: transparent;
+}
+
+#popup {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+  display: none;
+  z-index: 10;
+  pointer-events: none; 
+}
+
+    </style>
+    
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header " style="position: static;" >
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="#components">Components</a></li>
+                                                <li><a href="#technology">Technology</a></li>
+                                                <li><a href="#predict">Predict</a>
+                                                </li>
+                                                <li><a href="contact.html">Map</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!-- Slider Area Start-->
+        <div class="slider-area slider-bg ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider d-flex align-items-center slider-height ">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-xl-5 col-lg-5 col-md-9 ">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".3s">NASA Space Apps Challenge 2025</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".6s ">Tracking Sharks from Space</h1>
+                                    <p data-animation="fadeInLeft" data-delay=".8s">Using satellite data, AI, and real-time ocean sensors to understand and protect marine ecosystems.</p>
+                                    <!-- Slider btn -->
+                                    <div class="slider-btns">
+                                        <!-- Hero-btn -->
+                                        <a data-animation="fadeInLeft" data-delay="1s"  class="btn radius-btn">Explore The Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero__img d-none d-lg-block f-right">
+                                    <img src="assets/img/hero/hero_right.png" alt="" data-animation="fadeInRight" data-delay="1s">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <!-- Slider Shape -->
+            <div class="slider-shape d-none d-lg-block">
+                <img class="slider-shape1" src="assets/img/hero/top-left-shape.png" alt="">
+            </div>
+        </div>
+        <!-- Slider Area End -->
+         
+    </div>
+    <!--? Team -->
+    <section id="components" class="team-area section-padding10 section-bg1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12">
+                    <div class="section-tittle text-center mb-105" id="#Technology">
+                        <h2>Core System Components</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6"">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services1.png" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Satellite Data</a></h5>
+                            <p>Ocean Chlorophyll concentration, Fluorescence line height, Total Absorption at 412nm, Total Backscattering at 412nm, Diffuse Attenuation coefficient at 490nm, Particulate Inorganic Carbon, Remote Sensing reflectance at 412nm and Sea Surface Temperature</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services2.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">AI Model</a></h5>
+                            <p>Predicts foraging zones based on location and enviromental factors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services3.svg" style="height: 5.5rem;" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Smart Tags</a></h5>
+                            <p>Non-invasive sensors attached to sharks record depth, temperature, images, and movement, transmitting data when near a buoy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services4.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Smart Buoy <br>Network</a></h5>
+                            <p>Specialized buoys are deployed in predicted zones to gather in-situ ocean data and receive transmissions from tagged sharks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services5.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Hybrid Data Transmission</a></h5>
+                            <p>The system operates in two modes: synchronous (direct GPS or satellite link) and asynchronous (data stored until contact with a buoy).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="assets/img/icon/services6.svg" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Data Integration & Analytics</a></h5>
+                            <p>All transmitted data — both synchronous and asynchronous — is unified, processed, and analyzed to refine movement predictions and environmental correlations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services End -->
+    <!--? Pricing Card Start -->
+    <section id ="technology" class="pricing-card-area fix">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-8">
+                    <div class="section-tittle text-center mb-90">
+                        <h2>Three Core Pillars</h2>
+                        <p>Our project combines satellite data, artificial intelligence, and ocean-based technology to monitor, predict, and protect shark habitats — ensuring the survival of these vital apex predators.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <img src="assets/img/icon/price1.svg" style="width: 12rem; margin-left: 1rem;"alt="">
+                            <h4>Observation & Data</h4>
+                            <h3><b>Understanding the Ocean from Above</b></h3>
+                        </div>
+                        <div class="card-mid">
+                            <h3><br>Gathering environmental and behavioral data from satellites, sensors, and shark tags to reveal hidden ocean dynamics.</h3>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>Mini Sensors, Maximum insight.</li>
+                                <li>Every movement matters</li>
+                                <li>Non-invasive tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <img src="assets/img/icon/price2.svg" style="width: 12rem; padding-bottom: 1.5rem; margin-top: 4rem;"alt="">
+                            <h4>Prediction & Intelligence</h4>
+                            <h3><b>Learning From Life <br>Below</b></h3>
+                        </div>
+                        <div class="card-mid">
+                            <h3><br>Machine learning models analyze patterns to predict foraging zones and guide buoy placement.</h3>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>AI That learns the rythm of the ocean.</li>
+                                <li>Turning data into foresight.</li>
+                                <li>Predict to protect</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <img src="assets/img/icon/price3.svg" style="width: 12rem; padding-bottom: 1.5rem; margin-top: 3rem;"alt="">
+                            <h4>Protection & Action</h4>
+                            <h3><b>Safeguarding Apex Predators</b></h3>
+                        </div>
+                        <div class="card-mid">
+                            <h3><br>The strategic buoy network collects new data and helps track sharks in critical habitats to support conservation actions.</h3>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>Smart buoys for smarter conservation</li>
+                                <li>Smart tech, safer seas.</li>
+                                <li>Protecting life through connection.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Card End -->
+    <!--? About-1 Area Start -->
+    <div class="about-area1 section-padding40">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-5 col-lg-5 col-md-8 col-sm-10">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        <img src="assets/img/gallery/about1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-12">
+                    <div class="about-caption ">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle section-tittle2 mb-30">
+                            <h2>Data Flow Overview</h2>
+                        </div>
+                        <p class="mb-40">Track how information moves from sharks to satellites through smart tags and buoys, ensuring timely insights for conservation and research.</p>
+                        <ul>
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>Synchronous Transmission: Real-time data sent directly to GPS and monitoring systems.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>Asynchronous Storage: Data buffered in smart tags until a buoy can relay it to satellites.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>Integrated Feedback: All collected information feeds prediction models to optimize buoy placement and shark tracking.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About-1 Area End -->
+
+<section id="heatmap" class="testimonial-area section-bg1 section-padding30">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12 col-sm-11 text-center">
+                <!-- Section Title -->
+                <div class="section-tittle mb-50">
+                    <h2 class="text-white">Intelligent Tag Prototype</h2>
+                    <p class="text-white-75" style="font-size:1.4rem; line-height:1.5;">
+                        Take a look at this 3D model that lets you interact with our Tag concept for highly migratory medium-large sharks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODELADO 3D -->
+    <div class="model-wrap">
+        <model-viewer id="mv"
+            src="PrototipoMarcajeV1.glb"
+            alt="Prototipo 3D"
+            auto-rotate
+            camera-controls
+            camera-orbit="0deg 75deg 0.7m"
+            shadow-intensity="1"
+            environment-image="neutral"
+            ar
+            disable-zoom="false">
+        </model-viewer>
+    </div>
+    <!-- FIN MODELADO 3D -->
+</section>
+
+
+    <!--? About-2 Area Start -->
+    <div class="about-area1 pb-bottom">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-7 col-lg-7 col-md-12">
+                    <div class="about-caption about-caption3 mb-50">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle section-tittle2 mb-30">
+                            <h2>How does it work?</h2>
+                        </div>
+                        <p class="mb-40">Understanding shark movements and behavior is essential to preserving ocean ecosystems and maintaining the balance of marine life.</p>
+                        <ul class="mb-30">
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>Ecosystem Guardians: Sharks regulate species populations, keeping oceans healthy.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/icon/right.svg" alt="">
+                                <p>Critical Habitats: Data highlights key foraging and breeding areas requiring protection.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-5 col-md-8 col-sm-10">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        
+                        <!-- MAP -->
+<style>
+  #map-widget { width:100%; max-width:1150px; aspect-ratio:16/9; border-radius:12px; overflow:hidden; position:relative; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.05)); box-shadow:0 12px 40px rgba(3,10,20,0.6); margin: 0 auto 36px; z-index: 0;}
+  #map-widget .map-fill { width:100%; height:100%; display:block; }
+  #map-widget .map-icons { position:absolute; inset:0; pointer-events:none; z-index:80; }
+  #map-widget .map-icons .icon { position:absolute; transform:translate(-50%,-50%); pointer-events:auto; display:flex; align-items:center; justify-content:center; cursor:pointer; transition: transform .18s, filter .18s, color .18s; border-radius:6px;}
+  #map-widget .map-icons .icon i { color:#fff; text-shadow:0 4px 12px rgba(0,0,0,.6); }
+  #map-widget .map-icons .icon.satellite { font-size:25px; width:56px; height:56px; }
+  #map-widget .map-icons .icon.buoy { font-size:25px; width:46px; height:46px; }
+  #map-widget .map-icons .icon.buoy_alt { font-size:24px; width:48px; height:48px; } 
+  #map-widget .map-icons .icon.boat_a { font-size:28px; width:50px; height:50px; }
+  #map-widget .map-icons .icon.boat_b { font-size:28px; width:46px; height:46px; }
+  #map-widget .map-icons .icon.shark { font-size:28px; width:40px; height:40px; }
+  #map-widget .map-icons .icon.station { font-size:26px; width:40px; height:40px; }
+
+  #map-widget .map-icons .icon:hover { transform: translate(-50%,-50%) scale(1.15); color: var(--accent, #ff5c8a); }
+  #map-widget .map-icons .icon.active { color: #ff003c; filter: drop-shadow(0 8px 22px rgba(255,0,60,0.28)); transform: translate(-50%,-50%) scale(1.22); }
+
+  #map-widget .popup { position:absolute; min-width:200px; max-width:360px; background:#fff; color:#062b36; border-radius:10px; padding:10px 12px; box-shadow:0 10px 28px rgba(0,0,0,0.45); display:none; z-index:120; pointer-events:auto; }
+  #map-widget .popup .close { position:absolute; right:8px; top:6px; background:transparent; border:none; font-size:18px; cursor:pointer; }
+
+  #map-widget .transmission-line { stroke:#ff3b4d; stroke-width:2; stroke-dasharray:6 6; stroke-linecap:round; animation: dashPulse 1.2s linear infinite; pointer-events:none; }
+  @keyframes dashPulse { 0%{ stroke-dashoffset:0; opacity:1 } 50%{ stroke-dashoffset:10; opacity:0.45 } 100%{ stroke-dashoffset:0; opacity:1 } }
+
+
+  #map-widget:focus { outline: 3px solid rgba(255,92,138,0.12); outline-offset: 4px; }
+</style>
+
+<div id="map-widget" tabindex="0" aria-label="Interactive marking diorama widget">
+
+  <svg class="map-fill" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="false">
+    <defs>
+      <linearGradient id="seaGrad_w" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1e9fc3"/><stop offset="55%" stop-color="#1a7fa0"/><stop offset="100%" stop-color="#13506f"/>
+      </linearGradient>
+      <linearGradient id="sandGrad_w" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#f7ead2"/><stop offset="100%" stop-color="#e0c89a"/>
+      </linearGradient>
+      <pattern id="waves_w" x="0" y="0" width="120" height="30" patternUnits="userSpaceOnUse">
+        <path d="M0 18 C20 6 40 6 60 18 C80 30 100 30 120 18" stroke="rgba(255,255,255,0.04)" stroke-width="1" fill="none" />
+      </pattern>
+    </defs>
+
+    <rect x="0" y="0" width="1200" height="700" fill="url(#seaGrad_w)"></rect>
+    <path d="M0 0 C110 40 140 120 160 180 C140 240 180 320 160 380 C160 440 200 520 160 580 C120 640 80 700 0 700 L0 700 L0 0 Z" fill="url(#sandGrad_w)" stroke="#e6d3b2" stroke-width="0.9"></path>
+    <rect x="200" y="160" width="420" height="240" fill="url(#waves_w)" opacity="0.12"></rect>
+
+    <g id="mv-items"></g>
+    <g id="mv-lines"></g>
+  </svg>
+
+  <div class="map-icons" id="mv-icons" aria-hidden="false"></div>
+
+  <div class="popup" id="mv-popup" role="dialog" aria-hidden="true"></div>
+</div>
+
+<script>
+
+(function () {
+  const container = document.getElementById('map-widget');
+  if (!container) return;
+
+  const svg = container.querySelector('.map-fill');
+  const itemsLayer = svg.querySelector('#mv-items');
+  const linesLayer = svg.querySelector('#mv-lines');
+  const iconsLayer = container.querySelector('#mv-icons');
+  const popup = container.querySelector('#mv-popup');
+
+  
+  const elements = [
+    { id:'sat1', type:'satellite', x:900, y:80, title:'Satellite Geo-1', info:'Satellites receive data transmitted from sea and provide partial real-time access to stakeholders.' },
+    { id:'sat2', type:'satellite', x:700, y:40, title:'Satellite Geo-2', info:'Satellites receive data transmitted from sea and provide partial real-time access to stakeholders.' },
+
+    { id:'buoy1', type:'buoy', x:560, y:380, title:'Buoy Alpha', info:'Stationary buoys remain at known locations; they collect data and forward it via ARGOS or IRIDIUM.' },
+    { id:'buoy_alt', type:'buoy_alt', x:650, y:350, title:'Buoy Gamma (high-capacity)', info:'Stationary buoys remain at known locations; they collect data and forward it via ARGOS or IRIDIUM.' },
+
+    { id:'boat_a', type:'boat_a', x:460, y:300, title:'Research Boat A', info:'Boats are excellent signal relays and can serve as bridges when other media are unavailable.' },
+    { id:'boat_b', type:'boat_b', x:780, y:330, title:'Fishing Boat B', info:'Fishing vessels can recover tags or install transmitters during operations.' },
+
+    { id:'shark1', type:'shark', x:480, y:460, title:'Shark Tag-01', info:'Sharks can communicate via S.P.O.T tags to ARGOS network satellites. They can also communicate with each other and with buoys or boats.' },
+    { id:'shark2', type:'shark', x:790, y:520, title:'Shark Tag-02', info:'Sharks can communicate via S.P.O.T tags to ARGOS network satellites. They can also communicate with each other and with buoys or boats.' },
+    { id:'shark3', type:'shark', x:1020, y:620, title:'Shark Tag-03', info:'Sharks can communicate via S.P.O.T tags to ARGOS network satellites. They can also communicate with each other and with buoys or boats.' },
+
+    { id:'station', type:'station', x:120, y:360, title:'Coastal Station', info:'Near-shore sensors can receive information from sharks close to the shoreline or from relay buoys.' }
+  ];
+
+  const faByType = {
+    satellite: 'fa-satellite',
+    buoy: 'fa-life-ring',
+    buoy_alt: 'fa-podcast',
+    boat_a: 'fa-ship',
+    boat_b: 'fa-sailboat',
+    shark: 'fa-fish',
+    station: 'fa-building'
+  };
+
+  
+  function svgEl(tag){ return document.createElementNS('http://www.w3.org/2000/svg', tag); }
+
+
+  elements.forEach(el => {
+
+    const g = svgEl('g');
+    g.classList.add('mv-item');
+    g.setAttribute('transform', `translate(${el.x}, ${el.y})`);
+    g.dataset.id = el.id;
+    g.dataset.title = el.title;
+    g.dataset.info  = el.info;
+
+    const hit = svgEl('circle');
+    hit.setAttribute('r', 34); 
+    hit.setAttribute('fill', 'transparent');
+    hit.setAttribute('pointer-events', 'all');
+    g.appendChild(hit);
+
+    g.addEventListener('click', ev => { ev.stopPropagation(); selectItem(el.id, ev); });
+    itemsLayer.appendChild(g);
+
+    const ico = document.createElement('div');
+    ico.className = `icon ${el.type}`;
+    ico.setAttribute('data-id', el.id);
+    ico.setAttribute('role', 'button');
+    ico.setAttribute('tabindex', '0');
+    ico.dataset.title = el.title;
+    ico.dataset.info  = el.info;
+
+    ico.style.left = (el.x / 1200 * 100) + '%';
+    ico.style.top  = (el.y / 700 * 100) + '%';
+
+    const i = document.createElement('i');
+    i.className = `fa-solid ${faByType[el.type] || 'fa-map-marker-alt'}`;
+    ico.appendChild(i);
+
+    ico.addEventListener('click', ev => { ev.stopPropagation(); selectItem(el.id, ev); });
+    ico.addEventListener('keydown', ev => { if(ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); selectItem(el.id, ev); } });
+
+    iconsLayer.appendChild(ico);
+  });
+
+  const neighborThreshold = 240;
+  const kNeighbors = 2;
+  const lineKeySet = new Set();
+  function addLineIfNotExists(a,b,opacity){ 
+    const key = a.id < b.id ? `${a.id}|${b.id}` : `${b.id}|${a.id}`;
+    if(lineKeySet.has(key)) return;
+    lineKeySet.add(key);
+    const line = svgEl('line'); line.classList.add('transmission-line');
+    line.setAttribute('x1', a.x); line.setAttribute('y1', a.y);
+    line.setAttribute('x2', b.x); line.setAttribute('y2', b.y);
+    if(opacity !== undefined) line.style.opacity = opacity;
+    else { const d = Math.hypot(a.x-b.x, a.y-b.y); if(d > 420) line.style.opacity = 0.35; }
+    linesLayer.appendChild(line);
+  }
+
+  function createLines() {
+    linesLayer.innerHTML = '';
+    lineKeySet.clear();
+    const sats = elements.filter(e => e.type === 'satellite');
+
+    elements.forEach(el => sats.forEach(s => addLineIfNotExists(el, s, 0.95)));
+
+    for(let i=0;i<elements.length;i++){
+      const a = elements[i];
+      const distances = elements.map((b, idx) => ({ idx, d: Math.hypot(a.x-b.x, a.y-b.y) })).filter(x => x.idx !== i);
+      distances.sort((p,q) => p.d - q.d);
+   
+      for(let n=0; n<kNeighbors && n<distances.length; n++){
+        addLineIfNotExists(a, elements[distances[n].idx]);
+      }
+
+      distances.forEach(obj => { if(obj.d <= neighborThreshold) addLineIfNotExists(a, elements[obj.idx]); });
+    }
+  }
+  createLines();
+
+  let selectedId = null;
+  function getSvgNodeById(id){ return itemsLayer.querySelector(`.mv-item[data-id="${id}"]`); }
+  function getHtmlIconById(id){ return iconsLayer.querySelector(`.icon[data-id="${id}"]`); }
+
+  function selectItem(id, ev){
+    const svgNode = getSvgNodeById(id);
+    if(!svgNode) return;
+    if(selectedId === id) { clearSelection(); return; }
+    selectedId = id;
+
+    itemsLayer.querySelectorAll('.mv-item').forEach(n => n.classList.remove('selected'));
+    iconsLayer.querySelectorAll('.icon').forEach(i => i.classList.remove('active'));
+    svgNode.classList.add('selected');
+    const htmlIcon = getHtmlIconById(id); if(htmlIcon) htmlIcon.classList.add('active');
+
+    svg.classList.add('mv-blur');
+
+    let clientX = ev.clientX, clientY = ev.clientY;
+    if(!clientX) { const rb = svgNode.getBoundingClientRect(); clientX = rb.left + rb.width/2; clientY = rb.top + rb.height/2; }
+    showPopup(svgNode.dataset.title, svgNode.dataset.info, clientX, clientY);
+  }
+
+  function clearSelection(){
+    selectedId = null;
+    itemsLayer.querySelectorAll('.mv-item').forEach(n => n.classList.remove('selected'));
+    iconsLayer.querySelectorAll('.icon').forEach(i => i.classList.remove('active'));
+    svg.classList.remove('mv-blur');
+    hidePopup();
+  }
+
+  function showPopup(title, info, clientX, clientY){
+    popup.innerHTML = `<button class="close" aria-label="Close">&times;</button><h4 style="margin:0 0 6px 0;color:#062b36">${title}</h4><p style="margin:0;color:#223;font-size:13px;line-height:1.2">${info}</p>`;
+    const rect = container.getBoundingClientRect();
+    let left = clientX - rect.left + 12;
+    let top  = clientY - rect.top + 12;
+    const maxW = Math.min(360, rect.width - 16);
+    popup.style.maxWidth = maxW + 'px';
+    if(left + maxW > rect.width) left = rect.width - maxW - 12;
+    if(top + 160 > rect.height) top = rect.height - 170;
+    popup.style.left = Math.max(8, left) + 'px';
+    popup.style.top  = Math.max(8, top) + 'px';
+    popup.style.display = 'block'; popup.setAttribute('aria-hidden','false');
+
+    popup.querySelector('.close').addEventListener('click', function(ev){ ev.stopPropagation(); clearSelection(); });
+
+    setTimeout(() => document.addEventListener('click', outsideClickHandler));
+  }
+
+  function hidePopup(){ popup.style.display = 'none'; popup.setAttribute('aria-hidden','true'); document.removeEventListener('click', outsideClickHandler); }
+
+  function outsideClickHandler(ev){
+    if (container.contains(ev.target)) return; 
+    clearSelection(); 
+  }
+
+  
+  container.addEventListener('keydown', function(ev){ if(ev.key === 'Escape') clearSelection(); });
+
+  container.addEventListener('click', function(){ container.focus(); });
+
+  container._diormaWidget = {
+    clear: clearSelection,
+    rebuildLines: function(){ linesLayer.innerHTML = ''; createLines(); }
+  };
+
+})();
+</script>
+<!-- END MAP -->
+
+               
+
+
+
+                    </div>
+                </div>
+            </div>
+                             <div class="text-end mt-3">
+  <a href="#mission" 
+     data-animation="fadeInLeft" 
+     data-delay="1s" 
+     class="btn radius-btn map-btn">
+     Click on the map icons!
+  </a>
+</div>
+        </div>
+    </div>
+    <!-- About-2 Area End -->
+    <!-- Data Prediction -->
+    <section id="predict" class="ask-questions section-bg1 section-padding30 fix">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-9 col-md-10 ">
+                <!-- Section Title -->
+                <div class="section-tittle text-center mb-60">
+                    <h2>Predict Shark Foraging Zones</h2>
+                    <p>Enter environmental parameters to generate a model prediction for shark activity in a specific ocean region.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prediction Form -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form id="prediction-form" class="form-style mb-50">
+                    <div class="row g-3">
+                        <div class="col-md-6 mb-3">
+                            <label class="text-white" for="fluorescence" style="display:block; margin-bottom:0.5rem; line-height:1.2;font-size: 1.2rem;">
+                                Fluorescence line height, W m⁻² μm⁻¹ sr⁻¹
+                            </label>
+                            <input type="number" step="any" name="fluorescence" placeholder="Ex: 0.7" required class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="text-white" for="absorption" style="display:block; margin-bottom:0.5rem; line-height:1.2;font-size: 1.2rem;">
+                                Absorption coefficient, m⁻¹
+                            </label>
+                            <input type="number" step="any" name="absorption" placeholder="Ex: 0.03" required class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="text-white" for="temperature" style="display:block; margin-bottom:0.5rem; line-height:1.2;font-size: 1.2rem;">
+                                Temperature, °C
+                            </label>
+                            <input type="number" step="any" name="temperature" placeholder="Ex: 22.5" required class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="text-white" for="chlorophylle" style="display:block; margin-bottom:0.5rem; line-height:1.2;font-size: 1.2rem;">
+                                Chlorophylle concentration, mg m⁻³
+                            </label>
+                            <input type="number" step="any" name="chlorophylle" placeholder="Ex: 1.2" required class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="text-white" for="backscattering" style="display:block; margin-bottom:0.5rem; line-height:1.2;font-size: 1.2rem;">
+                                Backscattering coefficient, m⁻¹
+                            </label>
+                            <input type="number" step="any" name="backscattering" placeholder="Ex: 0.005" required class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="text-white" for="diffuse_attenuation_coefficient" style="display:block; margin-bottom:0.5rem; line-height:1.2;font-size: 1.2rem;">
+                                Diffuse attenuation coefficient, m⁻¹
+                            </label>
+                            <input type="number" step="any" name="diffuse_attenuation_coefficient" placeholder="Ex: 0.04" required class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="text-white" for="particulate_inorganic_carbon" style="display:block; margin-bottom:0.5rem; line-height:1.2;font-size: 1.2rem;">
+                                Particulate inorganic carbon, mg m⁻³
+                            </label>
+                            <input type="number" step="any" name="particulate_inorganic_carbon" placeholder="Ex: 0.8" required class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3"> <label class="text-white" for="remote_sensing_reflectance" style="display:block; margin-bottom:0.5rem; line-height:1.2;font-size: 1.2rem;"> Remote sensing reflectance, sr⁻¹ </label> <input type="number" step="any" name="remote_sensing_reflectance" placeholder="Ex: 0.002" required class="form-control"> </div> <div class="col-12 text-center mt-3"> <button type="submit" class="btn">Predict</button> </div> </div>
+
+                </form>
+
+                <!-- Message popup -->
+<div id="popupmessage-prediction" style="
+    display:none;
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#333;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:8px;
+    z-index:9999;
+    opacity:1;
+    transition:opacity 0.3s;
+">
+  Enviando predicción...
+</div>
+
+                <!-- Prediction Output -->
+                <div id="prediction-output" class="section-tittle text-center mt-40" style="display:none;">
+                    <h2>Model Prediction:</h2>
+                    <p id="prediction-result" class="lead"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Heatmap Section Start -->
+<section id="heatmap" class="testimonial-area section-bg1 section-padding30">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12 col-sm-11 text-center">
+                <!-- Section Title -->
+                <div class="section-tittle mb-50">
+                    <h2 class="text-white">Shark Activity Heatmap</h2>
+                    <p class="text-white-75" style="font-size:1.1rem; line-height:1.5;">
+                        Predicted shark foraging zones based on satellite and sensor data. Areas with higher activity are highlighted in red, lower activity in blue.
+                    </p>
+                </div>
+                <!-- Heatmap Image -->
+                <div class="single-testimonial mt-30">
+                    <img src="assets/img/gallery/shark_foraging_heatmap_20090618_20090625.png" alt="Shark Activity Heatmap" class="img-fluid rounded" style="max-width:100%; box-shadow:0 4px 15px rgba(0,0,0,0.3);">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Heatmap Section End -->
+
+</main>
+<footer>
+    <div class="footer-wrappr " data-background="assets/img/gallery/footer-bg.png">
+        <div class="footer-area footer-padding ">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <!-- logo -->
+                            <div class="footer-logo mb-25">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                            <div class="footer-tittle mb-50">
+                                <p>Disclaimer: The model has been trained on data from 41 whale sharks (Rhincodon typus) within a specific foraging area. Results should be interpreted with caution and used for research purposes only.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"></div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Menu</h4>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#components">Components</a></li>
+                                    <li><a href="#technology">Technology</a></li>
+                                    <li><a href="#predict">Predict</a></li>
+                                    <li><a href="#heatmap">Map</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS here -->
+
+<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Date Picker -->
+<script src="./assets/js/gijgo.min.js"></script>
+
+<!-- Video bg -->
+<script src="./assets/js/jquery.vide.js"></script>
+
+<!-- Nice-select, sticky -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="./assets/js/jquery.barfiller.js"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="./assets/js/jquery.counterup.min.js"></script>
+<script src="./assets/js/waypoints.min.js"></script>
+<script src="./assets/js/jquery.countdown.min.js"></script>
+<script src="./assets/js/hover-direction-snake.min.js"></script>
+
+<!-- contact js -->
+<script src="./assets/js/contact.js"></script>
+<script src="./assets/js/jquery.form.js"></script>
+<script src="./assets/js/jquery.validate.min.js"></script>
+<script src="./assets/js/mail-script.js"></script>
+<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/predict.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<!-- 3D Modeling show module by Google   -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</body>
+</html>
