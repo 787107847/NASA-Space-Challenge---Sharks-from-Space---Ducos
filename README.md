@@ -1,5 +1,4 @@
-# 🦈 Whale Shark Foraging Prediction & Smart Tagging System  /  Sistema de Predicción de Forrajeo y Marcaje Inteligente de Tiburones Ballena -SHARKTAG.EARTH
-
+# 🦈 Whale Shark Foraging Prediction & Smart Tagging System  /  Sistema de Predicción de Forrajeo y Marcaje Inteligente de Tiburones Ballena - [SHARKTAG.EARTH](sharktag.earth)
 <p align="center">
   <img src="https://sharktag.earth/assets/img/hero/hero_right.png" alt="Whale Shark Project Banner" width="80%">
 </p>
