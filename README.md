@@ -19,7 +19,7 @@ Apoya a biólogos marinos y esfuerzos de conservación enmarcados en el **Objeti
 ---
 
 ## 🧠 Algorithm & Model Branch / Rama de Algoritmo y Modelo  
-🔗 [Go to branch / Ir a la rama →](https://github.com/787107847/NASA-Space-Challenge---Sharks-from-Space---Ducos/tree/model)
+🔗 [Go to branch / Ir a la rama →](../../tree/model)
 
 **EN:**  
 This branch contains the **machine learning model** developed in Python.  
@@ -34,7 +34,7 @@ Herramientas principales: `scikit-learn`, `pandas`, `numpy`, `joblib`.
 ---
 
 ## 🌐 Web Platform Branch / Rama de Plataforma Web  
-🔗 [Go to branch / Ir a la rama →](https://github.com/787107847/NASA-Space-Challenge---Sharks-from-Space---Ducos/tree/web)
+🔗 [Go to branch / Ir a la rama →](../../tree/web)
 
 **EN:**  
 This branch includes the **interactive web application**, built with PHP, HTML, CSS, and JavaScript.  
@@ -49,7 +49,7 @@ El sitio también presenta el concepto de nuestro **biologger inteligente** para
 ---
 
 ## 🧩 3D Modeling Branch / Rama de Modelado 3D  
-🔗 [Go to branch / Ir a la rama →](https://github.com/787107847/NASA-Space-Challenge---Sharks-from-Space---Ducos/tree/3D-modeling)
+🔗 [Go to branch / Ir a la rama →](../../tree/3D-modeling)
 
 **EN:**  
 This branch showcases the **3D conceptual model** of the smart biologger.  
@@ -75,10 +75,12 @@ Al combinar inteligencia artificial, ciencia marina e innovación en hardware, e
 
 ---
 
-## 🚀 Get Started / Cómo Empezar
+## 🪸 Acknowledgments / Agradecimientos
 
 **EN:**  
-Clone the repository and explore each branch for detailed documentation:
-```bash
-git clone https://github.com/YourUsername/whale-shark-foraging.git
-cd whale-shark-foraging
+Developed with love <3  
+**Contributors:** [@FrancoBnHD](https://github.com/FrancoBnHD), [@Chucaflu11](https://github.com/Chucaflu11), and [@787107847](https://github.com/787107847)
+
+**ES:**  
+Desarrollado con amor <3  
+**Colaboradores:** [@FrancoBnHD](https://github.com/FrancoBnHD), [@Chucaflu11](https://github.com/Chucaflu11) y [@787107847](https://github.com/787107847)
